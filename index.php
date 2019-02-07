@@ -24,7 +24,7 @@
                 echo "<td><p>".$item['breadname']."<p></td>";
                 echo "<td><p>".$item['breadtype']."<p></td>";
                 echo "<td><p>".$item['breadcount']."<p></td>";
-                echo "<td><p>".$item['breadweight']."<p></td>";
+                echo "<td><p>".$item['breadweight']."g<p></td>";
                 echo "<td><a href='edit.php?id=".$item['id']."'>Wijzig</a></td>";
                 echo "</tr>";
             }

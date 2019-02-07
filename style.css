@@ -39,6 +39,12 @@ form{
     text-align: center;
 }
 
+tr{
+    height: 5px;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
 td a{
     text-decoration: none;
 }
