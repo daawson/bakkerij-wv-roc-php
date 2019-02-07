@@ -3,10 +3,10 @@
     if(isset($_GET['edit'])){
         if($_GET['edit'] == "add") {
 
-            $bn = $_GET['name'];
-            $bt = $_GET['type'];
-            $bc = $_GET['count'];
-            $bw = $_GET['weight'];
+            $bn = htmlentities($_GET['name'], ENT_QUOTES, 'utf-8');
+            $bt = htmlentities($_GET['type'], ENT_QUOTES, 'utf-8');
+            $bc = htmlentities($_GET['count'], ENT_QUOTES, 'utf-8');
+            $bw = htmlentities($_GET['weight'], ENT_QUOTES, 'utf-8');
 
             $sql = "INSERT INTO breads (breadname, breadtype, breadcount, breadweight)
         VALUES ('".$bn."','". $bt ."','". $bc ."' , '". $bw ." ')";        // Prepare statement
@@ -22,22 +22,27 @@
 ?>
 
 <html>
-<body>
-<form action="add.php" method="get">
-    <label>Broodnaam:
-        <input type="text" name="name">
-    </label>
-    <label>Brood type:
-        <input type="text" name="type">
-    </label>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </q>
-    <label>Aantaal:
-        <input type="number" name="count">
-    </label>
-    <label>Gewicht:
-        <input type="number" name="weight">
-    </label>
-    <input type="submit" name="edit" value="add">
-    <input type="submit" name="edit" value="cancel">
-</form>
-</body>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+    <h1>Voeg brood toe: </h1>
+        <form action="add.php" method="get">
+            <label>Broodnaam:
+                <input type="text" name="name">
+            </label><br>
+            <label>Brood type:
+                <input type="text" name="type">
+            </label><br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </q>
+            <label>Aantaal:
+                <input type="number" name="count">
+            </label><br>
+            <label>Gewicht:
+                <input type="number" name="weight">
+            </label><br>
+            <input type="submit" name="edit" value="add">
+            <input type="submit" name="edit" value="cancel">
+        </form>
+    </body>
 </html>

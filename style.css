@@ -1,8 +1,48 @@
+html{
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
 body{
-    width: 70%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+}
+h1{
+    width: 100%;
+    margin: 0 0 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgray;
+
+}
+
+h1 a{
+    text-decoration: none;
+    text-align: left;
+    font-size: 25px;
 }
 #overzicht{
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     text-align: center;
+}
+
+table, td, tr, th{
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+form{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+td a{
+    text-decoration: none;
+}
+
+td a:hover{
+    color: gray;
 }
